@@ -1,0 +1,19 @@
+# ===== OS =====
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ===== Editor =====
+.vscode/
+.idea/
+*.swp
+
+# ===== Node (이 챌린지에서는 쓰지 않지만 실수로 올라오는 것 방지) =====
+node_modules/
+
+# ===== Logs =====
+*.log
+
+# ===== Secrets (절대 커밋 금지) =====
+.env
+.env.*
