@@ -243,8 +243,8 @@ AI가 준 코드를 그대로 붙이기 전에, 모르는 태그나 문법이 �
 
 | 구분 | 자료 |
 | --- | --- |
-| 운영 안내 | [WINK 웹기초 4주 챌린지 운영 안내](https://app.notion.com/p/3eb40f074808800fa1b3c7ff66a8b9b6) |
-| 1주차 | [1ST CHALLENGE \| HTML, 웹의 뼈대](https://app.notion.com/p/3eb40f0748088052aab7d1f9e5793b12) |
+| 운영 안내 | [WINK 웹기초 4주 챌린지 운영 안내](https://sky-sassafras-f68.notion.site/WINK-4-3e979064d43d8017b126f88e74b58a0b) |
+| 1주차 | [1ST CHALLENGE \| HTML, 웹의 뼈대](https://sky-sassafras-f68.notion.site/1ST-CHALLENGE-HTML-3db79064d43d80ac9207cd6e2c73557e) |
 | 2주차 | 공개 예정 |
 | 3주차 | 공개 예정 |
 | 4주차 | 공개 예정 |
