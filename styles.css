@@ -1,0 +1,262 @@
+:root {
+    --color-bg: #111111; /*전체 배경색*/
+    --color-surface: #1c1c1c;     /*카드나 박스 배경색*/
+    --color-text: #ffffff;     /*기본 글자색*/
+    --color-muted: #b3b3b3;     /*덜 중요한 글자색*/
+    --color-primary: #e50914;    /*사이트 대표 강조색*/
+    --spacing: 20px;          /*자주 쓸 여백 크기*/
+    --radius: 10px;        /*모서리 둥글기 값*/
+}
+
+* {
+    box-sizing: border-box;
+
+}
+
+body,
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+body {
+    background: var(--color-bg);
+    color: var(--color-text);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--spacing);
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+header a {
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+header > a {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+header button {
+    background: var(--color-primary);
+    color: var(--color-text);
+    border: none;
+    padding: 10px 16px;
+    border-radius: var(--radius);
+    cursor: pointer;
+}
+
+.hero {
+    min-height: 75vh;
+    background-image:
+        linear-gradient(transparent, rgba(0, 0, 0, 0.75)),
+        url("./images/begin-again.jpg");
+    background-size: cover;
+    background-position: center 10%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 32px;
+}
+.hero h1 {
+    color: var(--color-text);
+    font-size: 50px;
+    margin-bottom: 12px;
+}
+
+.hero p {
+    color: var(--color-muted);
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 12px;
+    align-self: flex-start;
+}
+.hero-buttons button {
+    padding: 14px 28px;
+    border: none;
+    border-radius: var(--radius);
+    font-size: 17px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+.play-button {
+    background: var(--color-primary);
+    color: var(--color-text);
+}
+.wish-button {
+    background: #333333;
+    color: var(--color-text);
+}
+.hero-buttons button:hover {
+    transform: translateY(-2px);
+}
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid #ffffff;
+    outline-offset: 3px;
+}
+
+.popular-section {
+    padding: 32px;
+}
+
+.popular-section h2 {
+    margin-bottom: 20px;
+}
+.wish-section {
+    padding: 32px;
+}
+
+.search-section {
+    padding: 32px;
+}
+
+.search-section h2 {
+    margin-bottom: 16px;
+}
+
+.search-section form {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.search-section input {
+    padding: 10px 12px;
+    border: 1px solid #444444;
+    border-radius: var(--radius);
+    background: var(--color-surface);
+    color: var(--color-text);
+}
+
+.search-section input:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+.search-section button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: var(--radius);
+    background: var(--color-primary);
+    color: var(--color-text);
+    cursor: pointer;
+}
+.card {
+    padding: var(--spacing);
+    border: 1px solid #333333;
+    border-radius: var(--radius);
+    background: var(--color-surface);
+    color: var(--color-text);
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+}
+
+.card img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    margin-bottom: 12px;
+}
+.card h3{
+    margin-bottom: 8px;
+}
+
+.card p{
+    color: var(--color-muted);
+}
+
+.card p + p {
+    margin-top: 6px;
+}
+.card button {
+    margin-top: 12px;
+    padding: 8px 14px;
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+}
+
+.card button:first-of-type {
+    background: var(--color-primary);
+    color: var(--color-text);
+}
+.card button:last-of-type {
+    background: #333333;
+    color: var(--color-text);
+}
+.card-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+footer {
+    padding: 24px 32px;
+    color: var(--color-muted);
+    border-top: 1px solid #333333;
+}
+
+@media (max-width: 640px) {
+    header {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    nav {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+    }
+    .hero {
+        min-height: 60vh;
+        padding: 24px 20px;
+        background-size: cover;
+        background-position: 80% center;
+        
+
+        
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+    .search-section form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .popular-section,
+    .wish-section,
+    .search-section {
+        padding: 24px 20px;
+    }
+
+    .card-list {
+        grid-template-columns: 1fr;
+    }
+}
