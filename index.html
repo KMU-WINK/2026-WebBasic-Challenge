@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WINK PLAY</title>
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
     <header>
@@ -19,50 +20,51 @@
         <button type="button">프로필</button>
     </header>
     <main>
-        <section>
-            <img src="./images/begin-again.jpg" alt="비긴어게인 영화 포스터" width="250">
-
+        <section class="hero">
             <h1>비긴어게인</h1>
             <p>실패를 겪은 음악 프로듀서가 재능 있는 싱어송라이터를 만나 그녀의 데뷔를 돕고, 자신의 삶도 다시 시작해 나가는 이야기</p>
-
-            <button type="button">재생</button>
-            <button type="button">찜</button>
+            <div class="hero-buttons">
+                <button class="play-button" type="button">재생</button>
+                <button class="wish-button" type="button">찜</button>
+            </div>
         </section>
 
-        <section>
+        <section class="popular-section">
             <h2>WINK 인기 작품</h2>
 
-            <article>
-                <img src="./images/truman-show.jpg" alt="트루먼 쇼 영화 포스터" width="200">
-                <h3>트루먼 쇼</h3>
-                <p>드라마 / 코미디</p>
-                <p>자신의 일상이 거대한 TV 쇼였다는 사실을 알게 된 남자가 진짜 삶을 찾아 나서는 이야기</p>
-                <button type="button">재생</button>
-                <button type="button">찜</button>
-            </article>
-            <article>
-                <img src="./images/la-la-land.jpg" alt="라라랜드 영화 포스터" width="200">
-                <h3>라라랜드</h3>
-                <p>로맨스 / 뮤지컬 / 드라마</p>
-                <p>꿈을 쫓는 재즈 피아니스트와 배우 지망생이 사랑과 현실 사이에서 선택을 마주하는 이야기</p>
-                <button type="button">재생</button>
-                <button type="button">찜</button>
-            </article>
-            <article>
-                <img src="./images/interstellar.jpg" alt="인터스텔라 영화 포스터" width="200">
-                <h3>인터스텔라</h3>
-                <p>SF / 드라마</p>
-                <p>인류의 미래를 위해 새로운 행성을 찾아 우주로 떠난 탐사대의 이야기</p>
-                <button type="button">재생</button>
-                <button type="button">찜</button>
-            </article>
+            <div class="card-list">
+                <article class="card">
+                    <img src="./images/truman-show.jpg" alt="트루먼 쇼 영화 포스터">
+                    <h3>트루먼 쇼</h3>
+                    <p>드라마 / 코미디</p>
+                    <p>자신의 일상이 거대한 TV 쇼였다는 사실을 알게 된 남자가 진짜 삶을 찾아 나서는 이야기</p>
+                    <button type="button">재생</button>
+                    <button type="button">찜</button>
+                </article>
+                <article class="card">
+                    <img src="./images/la-la-land.jpg" alt="라라랜드 영화 포스터">
+                    <h3>라라랜드</h3>
+                    <p>로맨스 / 뮤지컬 / 드라마</p>
+                    <p>꿈을 쫓는 재즈 피아니스트와 배우 지망생이 사랑과 현실 사이에서 선택을 마주하는 이야기</p>
+                    <button type="button">재생</button>
+                    <button type="button">찜</button>
+                </article>
+                <article class="card">
+                    <img src="./images/interstellar.jpg" alt="인터스텔라 영화 포스터">
+                    <h3>인터스텔라</h3>
+                    <p>SF / 드라마</p>
+                    <p>인류의 미래를 위해 새로운 행성을 찾아 우주로 떠난 탐사대의 이야기</p>
+                    <button type="button">재생</button>
+                    <button type="button">찜</button>
+                </article>
+            </div>
         </section>
 
-        <section>
+        <section class="wish-section">
             <h2>내가 찜한 작품</h2>
         </section>
 
-        <section>
+        <section class="search-section">
             <h2>작품 검색</h2>
 
             <form>
