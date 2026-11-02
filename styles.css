@@ -1,0 +1,285 @@
+/* 1. 리셋 — styles.css 맨 위에 */
+* {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  list-style: none; /* 메뉴용 목록의 점(•) 없애기 */
+}
+
+img {
+  max-width: 100%; /* 이미지가 부모 상자를 뚫고 나가지 않게 */
+  display: block;
+}
+
+:root {
+  --color-bg: #e20505;
+  --color-bg-2: #1a1a1a;
+  --color-text: #ffffff;
+  --color-text-2: #f7e306;
+  --color-primary: #f29406;
+  --radius: 8px;
+}
+
+/* =========================
+   전체 배경 및 글씨 색상
+   ========================= */
+body {
+  background-color: var(--color-bg-2);
+  color: var(--color-text);
+  min-height: 100vh;
+}
+
+/* 추천 콘텐츠 4개 배치 */
+.top_movie {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* 추천 콘텐츠 이미지 */
+.top_movie article img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+
+  /* 이미지 모서리를 둥글게 */
+  border-radius: 12px;
+
+  /* 마우스를 올리고 내릴 때 자연스럽게 움직임 */
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* 이미지에 마우스를 올렸을 때 */
+.top_movie article img:hover {
+  /* 살짝 위로 올라가면서 확대 */
+  transform: translateY(-5px) scale(1.02);
+
+  /* 떠 있는 느낌의 그림자 */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.25);
+}
+
+/* =========================
+   상단 영역
+   ========================= */
+header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 20px;
+}
+
+/* 로고 */
+header h1 {
+  width: 100%;
+  color: var(--color-text);
+}
+
+/* 메뉴 */
+header nav {
+  display: flex;
+  gap: 20px;
+}
+
+/* 메뉴 글씨 흰색 */
+header nav a {
+  color: var(--color-text);
+}
+
+/* =========================
+   검색 영역
+   ========================= */
+header form {
+  display: flex;
+  align-items: center;
+
+  /* 검색 버튼의 위치 기준 */
+  position: relative;
+
+  /* 찜 메뉴와 검색창 사이 간격 */
+  margin-left: 20px;
+
+  /* 남는 가로 공간을 모두 차지 */
+  flex: 1;
+
+  /* 화면이 좁아질 때 크기 조절 허용 */
+  min-width: 0;
+}
+
+/* 검색창 디자인 */
+header form input[type="text"] {
+  /* 검색창이 남은 공간을 모두 채우도록 설정 */
+  flex: 1;
+  width: auto;
+  min-width: 0;
+
+  /* 검색창 높이 */
+  height: 42px;
+
+  /* 검색창 내부 배경색 */
+  background-color: #3a3a3a;
+
+  /* 검색창 안에 입력하는 글씨 색 */
+  color: white;
+
+  /* 검색창 테두리 */
+  border: 1px solid #666666;
+
+  /* 검색창을 둥근 원형으로 */
+  border-radius: 9999px;
+
+  /* 검색창 안쪽 여백 */
+  padding: 0 55px 0 16px;
+
+  /* 글씨 크기 */
+  font-size: 15px;
+
+  /* 클릭했을 때 기본 외곽선 제거 */
+  outline: none;
+}
+
+/* 검색창 안의 안내 문구 */
+header form input[type="text"]::placeholder {
+  color: white;
+}
+
+/* 검색창을 클릭했을 때 */
+header form input[type="text"]:focus {
+  border-color: #ffffff;
+}
+
+/* =========================
+   검색 버튼
+   ========================= */
+header form button {
+  /* 검색창 오른쪽 내부에 배치 */
+  position: absolute;
+  right: 4px;
+  top: 50%;
+
+  /* 세로 중앙 정렬 */
+  transform: translateY(-50%);
+
+  /* 검색 버튼을 원형으로 */
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+
+  /* 검색창과 동일한 배경색 */
+  background-color: #3a3a3a;
+
+  /* 버튼 테두리 제거 */
+  border: none;
+
+  /* 기존 검색 글씨 숨기기 */
+  font-size: 0;
+
+  cursor: pointer;
+}
+
+/* 돋보기의 동그란 부분 */
+header form button::before {
+  content: "";
+
+  position: absolute;
+  top: 8px;
+  left: 9px;
+
+  width: 16px;
+  height: 16px;
+
+  /* 흰색 돋보기 테두리 */
+  border: 2px solid white;
+  border-radius: 50%;
+}
+
+/* 돋보기의 손잡이 부분 */
+header form button::after {
+  content: "";
+
+  position: absolute;
+  top: 23px;
+  left: 22px;
+
+  width: 9px;
+  height: 2px;
+
+  /* 흰색 손잡이 */
+  background-color: white;
+
+  /* 손잡이를 대각선으로 회전 */
+  transform: rotate(45deg);
+  transform-origin: left center;
+}
+
+/* =========================
+   프로필 버튼 영역
+   ========================= */
+header .Menu {
+  margin-left: 10px;
+}
+
+/* =========================
+   재생 버튼
+   ========================= */
+.top_movie article button:first-of-type {
+  background-color: var(--color-bg);
+  color: white;
+
+  border: none;
+  border-radius: 12px;
+
+  padding: 8px 16px;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+/* 재생 버튼에 마우스를 올렸을 때 */
+.top_movie article button:first-of-type:hover {
+  transform: translateY(-3px);
+
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* =========================
+   즐겨찾기 버튼
+   ========================= */
+.top_movie article button:nth-of-type(2) {
+  /* 검은색 기본 테두리 제거 */
+  border: none;
+
+  /* 재생 버튼과 동일한 둥근 모양 */
+  border-radius: 12px;
+
+  /* 재생 버튼과 동일한 크기 */
+  padding: 8px 16px;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+/* 즐겨찾기 버튼에 마우스를 올렸을 때 */
+.top_movie article button:nth-of-type(2):hover {
+  transform: translateY(-3px);
+
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}

@@ -2,7 +2,10 @@
 <html lang="ko">
   <head>
     <meta charset="UFT-8" />
-    <title>WINK 1주차 과제</title>
+    <title>WINK 2주차 과제</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- head 안에. 없으면 모바일에서 PC 화면을 축소해서 보여줍니다 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <body>
     <header>
@@ -13,6 +16,18 @@
         <a href="#">시리즈</a>
         <a href="#">찜</a>
       </nav>
+
+      <form>
+        <label for="name"></label>
+        <input
+          type="text"
+          id="name"
+          placeholder="영화/드라마 제목을 입력하세요."
+          required
+        />
+        <button type="submit">검색</button>
+      </form>
+
       <div class="Menu">
         <button>프로필</button>
       </div>
@@ -55,10 +70,5 @@
         </div>
       </section>
     </main>
-    <form>
-      <lable for="name">제목</lable>
-      <input type="text" id="name" placeholder="영화/드라마 제목을 입력하세요." required />
-      <button type="submit">검색</button>
-    </form>
   </body>
 </html>
