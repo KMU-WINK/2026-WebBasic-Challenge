@@ -25,7 +25,7 @@
             <p>실패를 겪은 음악 프로듀서가 재능 있는 싱어송라이터를 만나 그녀의 데뷔를 돕고, 자신의 삶도 다시 시작해 나가는 이야기</p>
             <div class="hero-buttons">
                 <button class="play-button" type="button">재생</button>
-                <button class="wish-button" type="button">찜</button>
+                <button class="wish-button" type="button" data-title="비긴어게인">찜</button>
             </div>
         </section>
 
@@ -39,7 +39,8 @@
                     <p>드라마 / 코미디</p>
                     <p>자신의 일상이 거대한 TV 쇼였다는 사실을 알게 된 남자가 진짜 삶을 찾아 나서는 이야기</p>
                     <button type="button">재생</button>
-                    <button type="button">찜</button>
+                    <button class="wish-button" type="button" data-title="트루먼 쇼">찜</button>
+                    <button class="detail-button" type="button">상세정보</button>
                 </article>
                 <article class="card">
                     <img src="./images/la-la-land.jpg" alt="라라랜드 영화 포스터">
@@ -47,7 +48,8 @@
                     <p>로맨스 / 뮤지컬 / 드라마</p>
                     <p>꿈을 쫓는 재즈 피아니스트와 배우 지망생이 사랑과 현실 사이에서 선택을 마주하는 이야기</p>
                     <button type="button">재생</button>
-                    <button type="button">찜</button>
+                    <button class="wish-button" type="button" data-title="라라랜드">찜</button>
+                    <button class="detail-button" type="button">상세정보</button>
                 </article>
                 <article class="card">
                     <img src="./images/interstellar.jpg" alt="인터스텔라 영화 포스터">
@@ -55,13 +57,20 @@
                     <p>SF / 드라마</p>
                     <p>인류의 미래를 위해 새로운 행성을 찾아 우주로 떠난 탐사대의 이야기</p>
                     <button type="button">재생</button>
-                    <button type="button">찜</button>
+                    <button class="wish-button" type="button" data-title="인터스텔라">찜</button>
+                    <button class="detail-button" type="button">상세정보</button>
                 </article>
             </div>
         </section>
-
+        <div class="detail-modal">
+            <h2 class="modal-title">영화제목</h2>
+            <p class="modal-genre">영화장르</p>
+            <p class="modal-description">영화줄거리</p>
+            <button class="close-button" type="button">닫기</button>
+        </div>
         <section class="wish-section">
             <h2>내가 찜한 작품</h2>
+            <div class="wish-list"></div>
         </section>
 
         <section class="search-section">
@@ -69,7 +78,7 @@
 
             <form>
                 <label for="movie">영화 검색</label>
-                <input type="text" id="movie" placeholder="영화 제목을 입력하세요" required>
+                <input type="text" id="movie" placeholder="영화 제목을 입력하세요">
                 <button type="submit">검색</button>
             </form>
         </section>
@@ -79,5 +88,6 @@
         <p>© 2026 WINK PLAY</p>
     </footer>
 
+    <script src="./script.js"></script>
 </body>
 </html>
